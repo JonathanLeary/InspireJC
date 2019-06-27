@@ -3,12 +3,12 @@ import ImageService from "./image-service.js";
 const _is = new ImageService()
 
 function drawImg() {
-  let imgElem = document.querySelector('#bg-image')
-  let template = ''
-  imgElem.innerHTML = template
+  document.body.style.backgroundImage = `url(${_is.img})`
 
 }
 export default class ImageController {
   contructor() {
+    _is.addSubscriber('img', drawImg)
+    _is.getImg()
   }
 }

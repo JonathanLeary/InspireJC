@@ -1,11 +1,11 @@
 import WeatherService from "./weather-service.js";
-import Weather from "../../models/weather.js";
+
 
 var _weatherService = new WeatherService()
 
 function drawWeather() {
+	document.querySelector('#weather').innerHTML = _weatherService.Weather.Template
 	console.log("THE WEATHER MAN SAYS:", _weatherService.Weather)
-
 }
 
 export default class WeatherController {

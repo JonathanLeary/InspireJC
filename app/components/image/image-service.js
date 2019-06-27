@@ -20,7 +20,7 @@ export default class ImageService {
 	getImg(url) {
 		imgApi.get(url)
 			.then(res => {
-				setState(res.data.url)
+				setState('img', res.data.url)
 			})
 			.catch(err => console.error(err))
 
@@ -30,6 +30,6 @@ export default class ImageService {
 	}
 
 	get img() {
-		return _state.img.map(i => new URL(i))
+		return _state.img
 	}
 }
