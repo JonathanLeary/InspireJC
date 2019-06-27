@@ -2,3 +2,16 @@
   color: red;
   font-size: 2em;
 }
+#quote{
+  color: red;
+}
+ #to-do{
+   color: blue;
+ }
+ #weather{
+   color: green;
+ }
+ #hello{
+   color: white;
+   justify-content: center;
+ }

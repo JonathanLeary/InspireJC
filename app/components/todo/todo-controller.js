@@ -21,8 +21,8 @@ export default class TodoController {
 
 	addTodo(e) {
 		e.preventDefault()
-		var form = e.target
-		var todo = {
+		let form = e.target
+		let todo = {
 			// DONT FORGET TO BUILD YOUR TODO OBJECT
 		}
 
