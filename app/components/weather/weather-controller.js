@@ -8,6 +8,7 @@ function drawWeather() {
 	console.log("THE WEATHER MAN SAYS:", _weatherService.Weather)
 }
 
+
 export default class WeatherController {
 
 	constructor() {

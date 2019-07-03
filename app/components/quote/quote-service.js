@@ -1,10 +1,14 @@
+
+import Quote from "../../models/quote.js";
+
+
 // @ts-ignore
 const _quoteApi = axios.create({
 	baseURL: '//bcw-sandbox.herokuapp.com/api/quotes',
 	timeout: 3000
 });
 let _state = {
-	quote: []
+	quote: {}
 }
 let _subscribers = {
 	quote: []
@@ -17,22 +21,20 @@ function _setState(prop, data) {
 
 export default class QuoteService {
 
-	get Quote() {
+	get quote() {
 		return _state.quote
 	}
 
 	addSubscriber(prop, fn) {
 		_subscribers[prop].push(fn)
 	}
-
 	getQuote() {
-		console.log('Quote given')
+		console.log("quote Recieved")
 		_quoteApi.get().then(res => {
-			_setState('quote', new Quote(res.data))
+			let DataQuote = res.data
+			console.log(DataQuote)
+			let quote = new Quote(DataQuote.quote)
+			_setState('quote', quote)
 		})
-			.catch(err => console.error(err))
 	}
-}
-
-
 }

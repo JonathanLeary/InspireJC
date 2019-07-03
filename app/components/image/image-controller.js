@@ -7,7 +7,7 @@ function drawImg() {
 
 }
 export default class ImageController {
-  contructor() {
+  constructor() {
     _is.addSubscriber('img', drawImg)
     _is.getImg()
   }

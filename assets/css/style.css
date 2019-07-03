@@ -1,17 +1,37 @@
+*{
+  color: cyan;
+}
+#bg-image{
+  background-size: cover; 
+}
+#hello{
+  padding-top: 219px;
+}
+#weather{
+  float: right;
+}
 #todo-error{
   color: red;
   font-size: 2em;
 }
-#quote{
-  color: red;
+#todos{
+  float: right;
 }
- #to-do{
-   color: blue;
- }
- #weather{
-   color: green;
- }
- #hello{
-   color: white;
-   justify-content: center;
- }
+#greeting{
+  justify-content: center;
+}
+#todo{
+justify-content: center;
+}
+#quote{
+  text-align: center;
+  padding-left: 4px;
+}
+#submit{
+  border-bottom:2px solid cyan;
+  outline: none;
+  background: transparent;
+  border-top:none;
+  border-right:none;
+  border-left:none;
+}
